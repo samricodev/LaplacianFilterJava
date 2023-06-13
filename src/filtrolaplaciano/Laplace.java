@@ -12,11 +12,7 @@ public class Laplace {
     public Laplace() {}
     
     //Laplace filter matrix
-    int[][] laplacianKernel = {
-            {1, 1, 1},
-            {1, -8, 1},
-            {1, 1, 1}
-    };
+    int[][] laplacianKernel = {{1, 1, 1},{1, -8, 1},{1, 1, 1}};
         
     //Convert image to matrix
     public void imageConvert(String url) throws IOException{

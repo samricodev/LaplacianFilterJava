@@ -20,7 +20,6 @@ public class WindowMain extends JFrame {
     JButton btnSequential, btnForkJoin, btnExecutor, btnClear, btnUpload;
     JFileChooser chooser;
     Laplace laplacian;
-    int imgId;
 
     public WindowMain() {
 
@@ -111,8 +110,9 @@ public class WindowMain extends JFrame {
 
     //ActionListener Methods
     public void upLoadImage() {
+        String directorioActual = System.getProperty("user.dir");
         chooser = new JFileChooser();
-        chooser.setCurrentDirectory(new File("C:\\Users\\srico\\programacion\\Paralela\\FiltroLaplaciano\\src\\images"));
+        chooser.setCurrentDirectory(new File(directorioActual+"/src/images"));
         int returnVal = chooser.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             ImageIcon image = new ImageIcon("src/images/" + chooser.getSelectedFile().getName());
